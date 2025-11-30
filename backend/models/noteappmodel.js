@@ -13,8 +13,9 @@ const noteschema=mongoose.Schema({
     { 
         type: String, 
         required: [true, 'Please add a description']
-     }
-})
+     },
+   
+}, { timestamps: true })
 
 const notemodel=mongoose.model('noteapp',noteschema) 
 

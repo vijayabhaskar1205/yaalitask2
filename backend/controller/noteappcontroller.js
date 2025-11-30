@@ -24,7 +24,7 @@
 
     const getall=async (req, res) => {
         try {
-            const notes = await notemodel.find();
+            const notes = await notemodel.find().sort({ createdAt: -1 });
             res.status(200).json(notes);
         } catch (error) {
             res.status(500).json({ message: error.message });
