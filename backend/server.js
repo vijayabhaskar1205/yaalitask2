@@ -3,7 +3,10 @@ const app=express()
 const cors=require('cors')
 const connection=require('./config/db')
 require('dotenv').config()
-app.use(cors())
+app.use(cors({
+    origin: '*', 
+    credentials: true
+}));
 app.use(express.json())
 const router=require('./routes/noterouter')
 app.use('/note',router)
