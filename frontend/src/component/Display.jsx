@@ -52,7 +52,7 @@ const Display = () => {
       } catch (err) {
         console.error(err);
       }
-    }, 500);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [search, notes]);
